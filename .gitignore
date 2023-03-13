@@ -1,0 +1,4 @@
+node_modules/
+src/css/*.css
+package-lock.json
+sedona-all/
