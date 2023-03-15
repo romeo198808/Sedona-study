@@ -1,0 +1,67 @@
+@mobile: 320px;
+@tablet: 768px;
+
+@font-face {
+  font-family:"Myriad-Pro" ;
+  src: url("../fonts/MYRIADPRO-REGULAR.OTF");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Myriad-Pro";
+  src: url("../fonts/MyriadPro-Light.otf");
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Myriad-Pro";
+  src: url("../fonts/MYRIADPRO-BOLD.OTF");
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+}
+// ! Тестовый коментарийй
+
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Myriad-Pro", Arial, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style: none
+}
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

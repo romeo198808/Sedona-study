@@ -18,6 +18,13 @@ gulp.task('style', function(){
 	.pipe(server.stream())
 });
 
+gulp.task('normalize', function(){
+	return gulp.src('src/css/normalize.css')
+	.pipe(cssmin())
+	.pipe(rename('normalize.min.css'))
+	.pipe(gulp.dest('src/css'))
+});
+
 gulp.task('serve', function() {
 	server.init({
 		server: "src",
@@ -30,4 +37,4 @@ gulp.task('serve', function() {
 	gulp.watch('src/*.html').on('change', server.reload);
 });
 
-gulp.task('start', gulp.series('style', 'serve'));
+gulp.task('start', gulp.series('normalize','style', 'serve'));
