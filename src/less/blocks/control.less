@@ -1,0 +1,58 @@
+.control__list {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  height: 56px;
+  padding-right: 20px;
+}
+.control__item {
+  display: flex;
+}
+.control__button {
+  width: 23px;
+  height: 23px;
+  padding: 0;
+
+  font-size: 0;
+
+  border: none;
+  background-color: inherit;
+  &--close {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    
+    &::after,&::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 0;
+
+      width: 23px;
+      height: 3px;
+
+      background-color: #ffffff;
+    }
+    &::after {
+      transform: rotate(45deg);
+    }
+    &::before {
+      transform : rotate(-45deg);
+    }
+  }
+  &--open {
+    position: relative;
+  }
+  &--open::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 23px;
+    height: 4px;
+
+    background-color: #81b3d2;
+    box-shadow: 0 9px 0 #81b3d2, 0 18px 0 #81b3d2;
+  }
+}

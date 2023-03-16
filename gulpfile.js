@@ -23,6 +23,7 @@ gulp.task('normalize', function(){
 	.pipe(cssmin())
 	.pipe(rename('normalize.min.css'))
 	.pipe(gulp.dest('src/css'))
+	.pipe(server.stream())
 });
 
 gulp.task('serve', function() {
@@ -35,6 +36,7 @@ gulp.task('serve', function() {
 	});
 	gulp.watch('src/less/**/*.less', gulp.series('style')).on('change', server.reload);
 	gulp.watch('src/*.html').on('change', server.reload);
+	gulp.watch('src/css/normalize.css', gulp.series('normalize')).on('change', server.reload);
 });
 
 gulp.task('start', gulp.series('normalize','style', 'serve'));
