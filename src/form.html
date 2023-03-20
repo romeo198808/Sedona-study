@@ -53,71 +53,75 @@
           <fieldset class="form__group">
             <legend class="form__title">Представьтесь:</legend>
             <div class="form__inner">
-              <label for="name">Имя:</label>
-              <input id="name" type="text" name="name" value="" placeholder="Петр">
+              <label class="form__label" for="name">Имя:</label>
+              <input class="form__input" id="name" type="text" name="name" value="" placeholder="Петр">
             </div>
             <div class="form__inner">
-              <label for="surname">Фамилия:</label>
-              <input id surname type="text" name="surname" value="" placeholder="Иванов">
+              <label class="form__label" for="surname">Фамилия:</label>
+              <input class="form__input" id="surname" type="text" name="surname" value="" placeholder="Иванов">
             </div>
             <div class="form__inner">
-              <label for="secondname">Отчество:</label>
-              <input id="secondname" type="text" name="" value="" placeholder="Александрович">
+              <label class="form__label" for="secondname">Отчество:</label>
+              <input class="form__input" id="secondname" type="text" name="" value="" placeholder="Александрович">
             </div>
           </fieldset>
 
           <fieldset class="form__group">
             <legend class="form__title">Контактная информация:</legend>
-            <div class="form__inner">
-              <label for="phone">Контактный телефон*:</label>
-              <input type="tel" name="phone" value="" placeholder="Введите телефон">
+            <div class="form__inner form__inner--column">
+              <label class="form__label form__label--column" for="phone">Контактный телефон*:</label>
+              <div class="form__wrap form__wrap--phone">
+                <input class="form__input form__input--column" id="phone" type="tel" name="phone" value="" placeholder="Введите телефон">
+              </div>
             </div>
-            <div class="form__inner">
-              <label for="mail">Электронная почта*:</label>
-              <input type="email" name="mail" value="" placeholder="Введите e-mail">
+            <div class="form__inner form__inner--column">
+              <label class="form__label form__label--column" for="mail">Электронная почта*:</label>
+              <div class="form__wrap form__wrap--mail">
+                <input class="form__input form__input--column" id="mail" type="email" name="mail" value="" placeholder="Введите e-mail">
+              </div>
             </div>
           </fieldset>
 
           <fieldset class="form__group">
             <legend class="form__title">Ваше общее впечатление:</legend>
             <div class="form__inner">
-              <input id="positive" type="radio" name="impression" value="positive" checked>
-              <label for="positive">Скорее положительное</label>
+              <input class="form__radio" id="positive" type="radio" name="impression" value="positive" checked>
+              <label class="form__label" for="positive">Скорее положительное</label>
             </div>
             <div class="form__inner">
-              <input id="negative" type="radio" name="impression" value="negative">
-              <label for="negative">Скорее отрицательное</label>
+              <input class="form__radio" id="negative" type="radio" name="impression" value="negative">
+              <label class="form__label" for="negative">Скорее отрицательное</label>
             </div>
             <div class="form__inner">
-              <input id="indefined" type="radio" name="impression" value="indefined">
-              <label for="indefined">Затрудняюсь ответить</label>
+              <input class="form__radio" id="indefined" type="radio" name="impression" value="indefined">
+              <label class="form__label" for="indefined">Затрудняюсь ответить</label>
             </div>
           </fieldset>
 
           <fieldset class="form__group">
             <legend class="form__title">Посещенные достопримечательности:</legend>
             <div class="form__inner">
-              <input id="bridge" type="checkbox" name="attractions" value="bridge-Devil" checked>
-              <label for="bridge">Мост Дьявола</label>
+              <input class="form__checkbox" id="bridge" type="checkbox" name="attractions" value="bridge-Devil" checked>
+              <label class="form__label" for="bridge">Мост Дьявола</label>
             </div>
             <div class="form__inner">
-              <input id="mount" type="checkbox" name="attractions" value="mount-bell" checked>
-              <label for="mount">Гора-Колокол</label>
+              <input class="form__checkbox" id="mount" type="checkbox" name="attractions" value="mount-bell" checked>
+              <label class="form__label" for="mount">Гора-Колокол</label>
             </div>
             <div class="form__inner">
-              <input id="park" type="checkbox" name="attractions" value="slide-park" checked>
-              <label for="park">Слайд-парк</label>
+              <input class="form__checkbox" id="park" type="checkbox" name="attractions" value="slide-park" checked>
+              <label class="form__label" for="park">Слайд-парк</label>
             </div>
             <div class="form__inner">
-              <input id="rocks" type="checkbox" name="attractions" value="red-rocks">
-              <label for="rocks">Краные скалы</label>
+              <input class="form__checkbox" id="rocks" type="checkbox" name="attractions" value="red-rocks">
+              <label class="form__label" for="rocks">Краные скалы</label>
             </div>
           </fieldset>
 
           <fieldset class="form__group">
             <legend class="form__title">Опишите свои эмоции:</legend>
             <div class="form__inner">
-              <textarea name="emotions" rows="8" cols="80" placeholder="Опишите подробно все свои восторги"></textarea>
+              <textarea class="form__textarea" name="emotions" rows="8" cols="80" placeholder="Опишите подробно все свои восторги"></textarea>
             </div>
           </fieldset>
           <button class="button form__button" type="submit" name="button">Отправить отзыв</button>
