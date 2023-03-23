@@ -86,15 +86,15 @@
             <legend class="form__title">Ваше общее впечатление:</legend>
             <div class="form__inner form__inner--radio">
               <input class="form__radio" id="positive" type="radio" name="impression" value="positive" checked>
-              <label class="form__label" for="positive" tabindex="2">Скорее положительное</label>
+              <label class="form__label" for="positive" tabindex="0">Скорее положительное</label>
             </div>
             <div class="form__inner form__inner--radio">
               <input class="form__radio" id="negative" type="radio" name="impression" value="negative">
-              <label class="form__label" for="negative" tabindex="2">Скорее отрицательное</label>
+              <label class="form__label" for="negative" tabindex="0">Скорее отрицательное</label>
             </div>
             <div class="form__inner form__inner--radio">
               <input class="form__radio" id="indefined" type="radio" name="impression" value="indefined">
-              <label class="form__label" for="indefined" tabindex="2">Затрудняюсь ответить</label>
+              <label class="form__label" for="indefined" tabindex="0">Затрудняюсь ответить</label>
             </div>
           </fieldset>
 
@@ -102,19 +102,19 @@
             <legend class="form__title">Посещенные достопримечательности:</legend>
             <div class="form__inner form__inner--checkbox">
               <input class="form__checkbox" id="bridge" type="checkbox" name="attractions" value="bridge-Devil" checked>
-              <label class="form__label" for="bridge" tabindex="2">Мост Дьявола</label>
+              <label class="form__label" for="bridge" tabindex="0">Мост Дьявола</label>
             </div>
             <div class="form__inner form__inner--checkbox">
               <input class="form__checkbox" id="mount" type="checkbox" name="attractions" value="mount-bell" checked>
-              <label class="form__label" for="mount" tabindex="2">Гора-Колокол</label>
+              <label class="form__label" for="mount" tabindex="0">Гора-Колокол</label>
             </div>
             <div class="form__inner form__inner--checkbox">
               <input class="form__checkbox" id="park" type="checkbox" name="attractions" value="slide-park" checked>
-              <label class="form__label" for="park" tabindex="2">Слайд-парк</label>
+              <label class="form__label" for="park" tabindex="0">Слайд-парк</label>
             </div>
             <div class="form__inner form__inner--checkbox">
               <input class="form__checkbox" id="rocks" type="checkbox" name="attractions" value="red-rocks">
-              <label class="form__label" for="rocks" tabindex="2">Краные скалы</label>
+              <label class="form__label" for="rocks" tabindex="0">Краные скалы</label>
             </div>
           </fieldset>
 
@@ -166,16 +166,18 @@
       </ul>
     </footer>
 
-    <div class="popup failure">
+    <div class="popup popup__failure">
       <h3 class="popup__title">Что-то пошло не так!</h3>
       <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button class=" button popup__button" type="button" name="button">Ок</button>
+      <button class=" button popup__button popup__button--failure" type="button" name="button">Ок</button>
     </div>
 
-    <div class="popup saccess">
+    <div class="popup popup__saccess">
       <h3 class="popup__title">Ваш отзыв отправлен!</h3>
       <p class="popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-      <button class=" button popup__button" type="button" name="button">Закрыть окно</button>
+      <div class="popup__wrap">
+        <button class=" button popup__button popup__button--success" type="button" name="button">Закрыть окно</button>
+      </div>
     </div>
 
   </body>
