@@ -23,3 +23,31 @@
     }
   }
 }
+@media(min-width: @tablet){
+  .nav {
+    font-size: 14px;
+    color: #000000;
+
+    background-color: #ffffff;
+    box-shadow: none;
+  }
+  .nav__list {
+    display: flex;
+  }
+  .nav__item {
+    width: 153px;
+
+    border: none;
+    &:nth-child(3) {
+      margin-left: auto;
+    }
+    &:hover, &:focus {
+      background-color: inherit;
+      color: #81b3d2;
+    }
+    &:active {
+      background-color: inherit;
+      opacity: 0.3;
+    }
+  }
+}
