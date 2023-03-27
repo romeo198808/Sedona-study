@@ -14,6 +14,9 @@
   text-align: center;
   text-transform: uppercase;
   color: #333333;
+  & br {
+    display: none;
+  }
 }
 .search-motel__button {
   width: 280px;
@@ -28,4 +31,25 @@
   margin-top: 50px;
 
   overflow: scroll;
+}
+@media(min-width: @tablet){
+  .search-motel__title {
+    margin-top: 50px;
+
+    font-weight: 30px;
+    line-height: 36px;
+  }
+  .search-motel__text {
+    width: 458px;
+    margin-top: 35px;
+    & br {
+      display: inline;
+    }
+  }
+  .search-motel__button {
+    width: 458px;
+  }
+  .search-motel__wrap {
+    overflow: none;
+  }
 }
