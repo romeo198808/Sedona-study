@@ -14,6 +14,7 @@ let server = require('browser-sync').create();
 
 //TODO Сделать автоматизацию для спрайта svg и сделать сборку продакшена в папку prod
 //?Made automation to optimize pictures
+//!test 2
 
 gulp.task('style', function(){
 	return gulp.src('src/less/style.less')
