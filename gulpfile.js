@@ -1,10 +1,18 @@
-var gulp = require('gulp');
-var less = require('gulp-less');
-var plumber =require('gulp-plumber');
-var cssmin = require('gulp-cssmin');
-var rename = require('gulp-rename');
-var autoprefixer = require('gulp-autoprefixer');
-var server =require('browser-sync').create();
+"use strict"
+
+let gulp = require('gulp');
+let less = require('gulp-less');
+let plumber =require('gulp-plumber');
+let cssmin = require('gulp-cssmin');
+let rename = require('gulp-rename');
+let autoprefixer = require('gulp-autoprefixer');
+let svgo = require('gulp-svgo');
+let imagemin = require('gulp-imagemin');
+let webp = require('gulp-webp');
+const { use } = require('browser-sync');
+let server = require('browser-sync').create();
+
+//TODO Сделать автоматизацию для спрайта svg и сделать сборку продакшена в папку prod
 
 gulp.task('style', function(){
 	return gulp.src('src/less/style.less')
@@ -15,6 +23,29 @@ gulp.task('style', function(){
 	.pipe(cssmin())
 	.pipe(rename('style.min.css'))
 	.pipe(gulp.dest('src/css'))
+	.pipe(server.stream())
+});
+
+gulp.task('webp', ()=> {
+	return gulp.src('src/img/*.{jpg,png}')
+	.pipe(webp())
+	.pipe(gulp.dest('src/img'))
+})
+
+gulp.task('image', ()=> {
+	return gulp.src('src/img/*.{png,jpg,svg}')
+	.pipe(imagemin([
+		imagemin.mozjpeg({quality: 70, progressive: true}),
+		imagemin.optipng({optimizationLevel:3}),
+		imagemin.svgo()
+	]))
+	.pipe(gulp.dest('src/img'))
+});
+
+gulp.task('svgo', ()=> {
+	return gulp.src('src/img/*.svg')
+	.pipe(svgo())
+	.pipe(gulp.dest('src/img'))
 	.pipe(server.stream())
 });
 
