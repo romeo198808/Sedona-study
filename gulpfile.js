@@ -9,6 +9,7 @@ let autoprefixer = require('gulp-autoprefixer');
 let svgo = require('gulp-svgo');
 let imagemin = require('gulp-imagemin');
 let webp = require('gulp-webp');
+let svgstore = require('gulp-svgstore');
 const { use } = require('browser-sync');
 let server = require('browser-sync').create();
 
@@ -28,11 +29,18 @@ gulp.task('style', function(){
 	.pipe(server.stream())
 });
 
+gulp.task('svg-sprite', ()=> {
+	return gulp.src('src/img/icon-*.svg')
+	.pipe(svgstore({inlineSvg: true}))
+	.pipe(rename('sprite.svg'))
+	.pipe(gulp.dest('src/img'))
+});
+
 gulp.task('webp', ()=> {
 	return gulp.src('src/img/*.{jpg,png}')
 	.pipe(webp())
 	.pipe(gulp.dest('src/img'))
-})
+});
 
 gulp.task('image', ()=> {
 	return gulp.src('src/img/*.{png,jpg,svg}')
