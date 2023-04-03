@@ -10,7 +10,7 @@
   </head>
   <body>
     <header class="header">
-      <nav class="header__nav nav">
+      <nav class="header__nav nav nav--close">
         <ul class="nav__list">
           <li class="nav__item">
             <a href="index.html" class="nav__link">Главная</a>
@@ -51,7 +51,7 @@
         <p class="review__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         <form class="review__form form" action="index.html" method="post">
           <fieldset class="form__group">
-            <legend class="form__title">Представьтесь:</legend>
+            <legend class="form__title form__title--low">Представьтесь:</legend>
             <div class="form__inner">
               <label class="form__label" for="name">Имя:</label>
               <input class="form__input" id="name" type="text" name="name" value="" placeholder="Петр">
@@ -83,7 +83,7 @@
           </fieldset>
 
           <fieldset class="form__group">
-            <legend class="form__title">Ваше общее впечатление:</legend>
+            <legend class="form__title form__title--low">Ваше общее впечатление:</legend>
             <div class="form__inner form__inner--radio">
               <input class="form__radio" id="positive" type="radio" name="impression" value="positive" checked>
               <label class="form__label" for="positive" tabindex="0 ">Скорее положительное</label>
@@ -120,11 +120,12 @@
 
           <fieldset class="form__group">
             <legend class="form__title">Опишите свои эмоции:</legend>
-            <div class="form__inner">
-              <textarea class="form__textarea" name="emotions" rows="8" cols="80" placeholder="Опишите подробно все свои восторги"></textarea>
+            <div class="form__inner form__inner--textarea">
+              <textarea class="form__textarea" name="emotions"  placeholder="Опишите подробно все свои восторги"></textarea>
             </div>
           </fieldset>
           <button class="button form__button" type="submit" name="button">Отправить отзыв</button>
+          <p class="form__important">* - Обязательные поля</p>
         </form>
       </section>
 
@@ -176,4 +177,5 @@
     </div>
 
   </body>
+  <script src="js/menu.js"></script>
 </html>
