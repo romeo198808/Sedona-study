@@ -319,3 +319,58 @@ input, textarea {
     color: #333333;
   }
 }
+@media(min-width: @desktop){
+  .form {
+    width: 960px ;
+  }
+  .form__group {
+    &:nth-child(3), &:nth-child(1) {
+      width: 400px;
+    }
+    &--column {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &:nth-child(4) {
+      flex-direction: row;
+      padding: 0;
+    }
+  }
+  .form__title {
+    &--mod {
+      padding-left: 80px;
+    }
+  }
+  .form__inner {
+    width: 400px;
+    margin: 0;
+    margin-top: 30px;
+    &--column {
+      flex-direction: row;
+      width: 480px;
+    }
+    &--checkbox {
+      width: 200px;
+    }
+    &--textarea {
+      width: 960px;
+    }
+  }
+  .form__label {
+    display: block;
+    margin: 0;
+    & span {
+      display: none;
+    }
+    &--column {
+      width: auto;
+      margin-right: 10px ;
+
+      line-height: 63px ;
+    }
+  }
+  .form__wrap {
+    position: relative;
+    width: 315px;
+  }
+}

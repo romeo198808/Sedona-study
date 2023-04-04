@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Sedona форма отзыва </title>
   </head>
   <body>
+    <div class="body__wrap">
     <header class="header">
       <nav class="header__nav nav nav--close">
         <ul class="nav__list">
@@ -37,7 +37,12 @@
         </ul>
       </div>
       <div class="header__logo logo">
-        <a href="#" class="logo__link"><img class="logo__img" src="img/logo.svg" alt="логотип Sedona"></a>
+        <a href="#" class="logo__link">
+          <picture>
+            <source media="(min-width:1200px )" srcset="img/logo-desktop.svg">
+            <img class="logo__img" src="img/logo.svg" alt="логотип Sedona">
+          </picture>
+        </a>
       </div>
       <div class="header__background background">
 
@@ -66,10 +71,10 @@
             </div>
           </fieldset>
 
-          <fieldset class="form__group">
+          <fieldset class="form__group form__group--column">
             <legend class="form__title">Контактная информация:</legend>
             <div class="form__inner form__inner--column">
-              <label class="form__label form__label--column" for="phone">Контактный телефон*:</label>
+              <label class="form__label form__label--column" for="phone"><span>Контактный</span> телефон*:</label>
               <div class="form__wrap form__wrap--phone">
                 <input class="form__input form__input--column" id="phone" type="tel" name="phone" value="" placeholder="Введите телефон">
               </div>
@@ -83,7 +88,7 @@
           </fieldset>
 
           <fieldset class="form__group">
-            <legend class="form__title form__title--low">Ваше общее впечатление:</legend>
+            <legend class="form__title form__title--low form__title--mod">Ваше общее впечатление:</legend>
             <div class="form__inner form__inner--radio">
               <input class="form__radio" id="positive" type="radio" name="impression" value="positive" checked>
               <label class="form__label" for="positive" tabindex="0 ">Скорее положительное</label>
@@ -162,20 +167,22 @@
       </ul>
     </footer>
 
-    <div class="popup popup__failure">
+    <div class="popup popup--failure">
       <h3 class="popup__title">Что-то пошло не так!</h3>
       <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
       <button class=" button popup__button popup__button--failure" type="button" name="button">Ок</button>
     </div>
 
-    <div class="popup popup__saccess">
-      <h3 class="popup__title">Ваш отзыв отправлен!</h3>
-      <p class="popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+    <div class="popup popup--saccess">
+      <h3 class="popup__title popup__title--success">Ваш отзыв отправлен!</h3>
+      <p class="popup__text popup__text--success">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
       <div class="popup__wrap">
         <button class=" button popup__button popup__button--success" type="button" name="button">Закрыть окно</button>
       </div>
     </div>
-
+  </div>
   </body>
+  <link rel="stylesheet" href="css/normalize.min.css">
   <script src="js/menu.js"></script>
+  <script src="js/form.js"></script>
 </html>
