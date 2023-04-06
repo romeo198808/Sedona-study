@@ -7,7 +7,7 @@
   text-transform: uppercase;
 }
 .photo__text {
-  width: 280px;
+  width: 270px;
   margin: 0 auto;
   margin-top: 35px;
 
@@ -15,6 +15,9 @@
   line-height: 24px;
   text-align: center;
   text-transform: uppercase;
+  & br {
+    display: none;
+  }
 }
 .photo__list {
   margin-top: 10px;
@@ -49,8 +52,52 @@
   line-height: 24px;
   font-weight: bold;
 
-  background-image: url(../img/like.svg);
+  background-image: url(../img/icon-like.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 23px 21px;
+}
+@media(min-width: @tablet){
+  .photo__title {
+    margin-top: 65px;
+
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .photo__text {
+    width: 430px;
+    & br {
+      display: inline;
+    }
+  }
+  .photo__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 648px;
+    margin: 0 auto;
+    margin-top: 70px;
+  }
+  .photo__item {
+    position: relative;
+    width: 50%;
+    padding: 0;
+    padding-bottom: 20px;
+
+    background-color: #f2f2f2;
+    border: none;
+    &:nth-child(1) {
+      width: 100%;
+    }
+  }
+  .photo__name {
+    padding-left: 20px;
+  }
+  .photo__author {
+    padding-left: 20px;
+  }
+  .photo__like {
+    position: absolute;
+    bottom: 30px ;
+    right:20px;
+  }
 }
