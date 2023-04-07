@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Sedona форма отзыва </title>
   </head>
@@ -67,7 +68,7 @@
             </div>
             <div class="form__inner">
               <label class="form__label" for="secondname">Отчество:</label>
-              <input class="form__input" id="secondname" type="text" name="" value="" placeholder="Александрович">
+              <input class="form__input" id="secondname" type="text" name="secondname" value="" placeholder="Александрович">
             </div>
           </fieldset>
 
@@ -91,15 +92,15 @@
             <legend class="form__title form__title--low form__title--mod">Ваше общее впечатление:</legend>
             <div class="form__inner form__inner--radio">
               <input class="form__radio" id="positive" type="radio" name="impression" value="positive" checked>
-              <label class="form__label" for="positive" tabindex="0 ">Скорее положительное</label>
+              <label class="form__label" for="positive" tabindex="1">Скорее положительное</label>
             </div>
             <div class="form__inner form__inner--radio">
               <input class="form__radio" id="negative" type="radio" name="impression" value="negative">
-              <label class="form__label" for="negative" tabindex="0">Скорее отрицательное</label>
+              <label class="form__label" for="negative" tabindex="1">Скорее отрицательное</label>
             </div>
             <div class="form__inner form__inner--radio">
               <input class="form__radio" id="indefined" type="radio" name="impression" value="indefined">
-              <label class="form__label" for="indefined" tabindex="0">Затрудняюсь ответить</label>
+              <label class="form__label" for="indefined" tabindex="1">Затрудняюсь ответить</label>
             </div>
           </fieldset>
 
@@ -107,19 +108,19 @@
             <legend class="form__title">Посещенные достопримечательности:</legend>
             <div class="form__inner form__inner--checkbox">
               <input class="form__checkbox" id="bridge" type="checkbox" name="attractions" value="bridge-Devil" checked>
-              <label class="form__label" for="bridge" tabindex="0">Мост Дьявола</label>
+              <label class="form__label" for="bridge" tabindex="1">Мост Дьявола</label>
             </div>
             <div class="form__inner form__inner--checkbox">
               <input class="form__checkbox" id="mount" type="checkbox" name="attractions" value="mount-bell" checked>
-              <label class="form__label" for="mount" tabindex="0">Гора-Колокол</label>
+              <label class="form__label" for="mount" tabindex="1">Гора-Колокол</label>
             </div>
             <div class="form__inner form__inner--checkbox">
               <input class="form__checkbox" id="park" type="checkbox" name="attractions" value="slide-park" checked>
-              <label class="form__label" for="park" tabindex="0">Слайд-парк</label>
+              <label class="form__label" for="park" tabindex="1">Слайд-парк</label>
             </div>
             <div class="form__inner form__inner--checkbox">
               <input class="form__checkbox" id="rocks" type="checkbox" name="attractions" value="red-rocks">
-              <label class="form__label" for="rocks" tabindex="0">Краные скалы</label>
+              <label class="form__label" for="rocks" tabindex="1">Краные скалы</label>
             </div>
           </fieldset>
 
@@ -145,17 +146,17 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__tw" href="#">
-                <svg class="social__img social__img--tw" width="18" heigt="14"><use xlink:href="img/sprite.svg#icon-tw"></use></svg>
+                <svg class="social__img social__img--tw" width="18" height="14"><use xlink:href="img/sprite.svg#icon-tw"></use></svg>
                 Твиттер</a>
             </li>
             <li class="social__item">
               <a class="social__link social__fb" href="#">
-                <svg class="social__img social__img--fb" width="9" heigt="18"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
+                <svg class="social__img social__img--fb" width="9" height="18"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
                 Фейсбук</a>
             </li>
             <li class="social__item">
               <a class="social__link social__youtube" href="#">
-                <svg class="social__img social__img--youtube" width="20" heigt="14"><use xlink:href="img/sprite.svg#icon-youtube"></use></svg>
+                <svg class="social__img social__img--youtube" width="20" height="14"><use xlink:href="img/sprite.svg#icon-youtube"></use></svg>
                 Ютуб</a>
             </li>
           </ul>
@@ -181,8 +182,7 @@
       </div>
     </div>
   </div>
-  </body>
-  <link rel="stylesheet" href="css/normalize.min.css">
   <script src="js/menu.js"></script>
   <script src="js/form.js"></script>
+  </body>
 </html>

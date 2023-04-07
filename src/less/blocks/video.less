@@ -58,6 +58,11 @@
   &--fullscreen {
     margin-left: auto;
   }
+  &--range {
+    position: absolute;
+    bottom: 66px;
+    left: 6.25%;
+  }
 }
 .svg {
   fill: #5c6870;
@@ -114,8 +119,21 @@
     &--fullscreen {
       margin-left: 30px;
     }
+    &--range {
+      position: static;
+
+      background-color: transparent;
+    }
   }
   .svg {
     fill: #ffffff;
+  }
+}
+@media(min-width: @desktop){
+  .video {
+    padding-bottom: 85px;
+  }
+  .video__wrap {
+    width: 800px;
   }
 }
