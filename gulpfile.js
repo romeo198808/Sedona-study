@@ -10,8 +10,11 @@ let svgo = require('gulp-svgo');
 let imagemin = require('gulp-imagemin');
 let webp = require('gulp-webp');
 let svgstore = require('gulp-svgstore');
+let clean  = require('gulp-clean');
+let copy = require('gulp-copy');
 const { use } = require('browser-sync');
 let server = require('browser-sync').create();
+
 
 
 
@@ -57,7 +60,7 @@ gulp.task('svgo', ()=> {
 	.pipe(server.stream())
 });
 
-gulp.task('normalize', function(){
+gulp.task('normalize', ()=> {
 	return gulp.src('src/css/normalize.css')
 	.pipe(cssmin())
 	.pipe(rename('normalize.min.css'))
@@ -65,7 +68,24 @@ gulp.task('normalize', function(){
 	.pipe(server.stream())
 });
 
-gulp.task('serve', function() {
+gulp.task('clean', ()=> {
+	return gulp.src('prod')
+	.pipe(clean());
+});
+
+gulp.task('copy', ()=> {
+	return gulp.src([
+		'src/*.html',
+		'src/css/**/*.css',
+		'src/fonts/**/*.*',
+		'src/img/**/*.*',
+		'src/js/**/*.js',
+	], {base:'src'})
+	// .pipe(copy('prod'));
+	.pipe(gulp.dest('prod/'));
+});
+
+gulp.task('serve', ()=> {
 	server.init({
 		server: "src",
 		notify: false,
@@ -78,4 +98,6 @@ gulp.task('serve', function() {
 	gulp.watch('src/css/normalize.css', gulp.series('normalize')).on('change', server.reload);
 });
 
-gulp.task('start', gulp.series('normalize','style', 'serve'));
+gulp.task('start', gulp.series('normalize', 'image', 'webp', 'svg-sprite', 'style', 'serve'));
+
+gulp.task('prod', gulp.series('clean', 'normalize', 'image', 'webp', 'svg-sprite', 'style', 'copy'));
