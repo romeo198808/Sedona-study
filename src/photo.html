@@ -1,189 +1,430 @@
 <!DOCTYPE html>
 <html lang="ru" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
     <title>Sedona Фотогалерея</title>
   </head>
   <body>
     <div class="body__wrap">
-    <header class="header">
-      <nav class="header__nav nav nav--close">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="index.html" class="nav__link">Главная</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Фото и видео</a>
-          </li>
-          <li class="nav__item">
-            <a href="form.html" class="nav__link">Форма отзыва</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Html academy</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="header__control control">
-        <ul class="control__list">
-          <li class="control__item">
-            <button class="control__button control__button--open" type="button" name="button">Открыть меню</button>
-          </li>
-          <li class="control__item">
-            <button class="control__button control__button--close" type="button" name="button">Закрыть меню</button>
-          </li>
-        </ul>
-      </div>
-      <div class="header__logo logo">
-        <a href="index.html" class="logo__link">
-          <picture>
-            <source media="(min-width:1200px )" srcset="img/logo-desktop.svg">
-            <img class="logo__img" src="img/logo.svg" alt="логотип Sedona">
-          </picture>         
-        </a>
-      </div>
-      
-    </header>
-
-    <main class="main">
-      <h1 class="main__title">Sedona</h1>
-      <section class="photo">
-        <h2 class="photo__title">Фото и видео</h2>
-        <p class="photo__text">Не можете решиться на путешествие  из-за курса? <br> Фотографии помогут вам забыть о политике и экономике.</p>
-        <ul class="photo__list">
-          <li class="photo__item">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/photo-1-desktop@2x.webp 2x, img/photo-1-desktop.webp 1x" type="image/webp">
-              <source media="(min-width: 768px)" srcset="img/photo-1-tablet@2x.webp 2x, img/photo-1-tablet.webp 1x" type="image/webp">
-              <source srcset="img/photo-1-mobile@2x.webp 2x, img/photo-1-mobile.webp 1x" type="image/webp">
-
-              <source media="(min-width: 1200px)" srcset="img/photo-1-desktop@2x.jpg 2x, img/photo-1-desktop.jpg 1x">
-              <source media="(min-width: 768px)" srcset="img/photo-1-tablet@2x.jpg 2x, img/photo-1-tablet.jpg 1x">
-              <img class="photo__img" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="фото">
-            </picture>
-            <div class="photo__wrap">
-              <h3 class="photo__name">Неродные просторы</h3>
-              <p class="photo__author">Афтор фото: <span class="photo__author--name">Борис</span></p>
-              <p class="photo__like">1350</p>
-            </div>
-            
-          </li>
-          <li class="photo__item">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/photo-2-desktop@2x.webp 2x, img/photo-2-desktop.webp 1x" type="image/webp">
-              <source media="(min-width: 768px)" srcset="img/photo-2-tablet@2x.webp 2x, img/photo-2-tablet.webp 1x" type="image/webp">
-              <source srcset="img/photo-2-mobile@2x.webp 2x, img/photo-2-mobile.webp 1x" type="image/webp">
-
-              <source media="(min-width: 1200px)" srcset="img/photo-2-desktop@2x.jpg 2x, img/photo-2-desktop.jpg 1x">
-              <source media="(min-width: 768px)" srcset="img/photo-2-tablet@2x.jpg 2x, img/photo-2-tablet.jpg 1x">
-              <img class="photo__img" src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="фото">
-            </picture>
-            <div class="photo__wrap">
-              <h3 class="photo__name">Местная растительность</h3>
-              <p class="photo__author">Афтор фото: <span class="photo__author--name">Сергей</span></p>
-              <p class="photo__like">143</p>
-            </div>
-          </li>
-          <li class="photo__item">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/photo-3-desktop@2x.webp 2x, img/photo-3-desktop.webp 1x" type="image/webp">
-              <source media="(min-width: 768px)" srcset="img/photo-3-tablet@2x.webp 2x, img/photo-3-tablet.webp 1x" type="image/webp">
-              <source srcset="img/photo-3-mobile@2x.webp 2x, img/photo-3-mobile.webp 1x" type="image/webp">
-
-              <source media="(min-width: 1200px)" srcset="img/photo-3-desktop@2x.jpg 2x, img/photo-3-desktop.jpg 1x">
-              <source media="(min-width: 768px)" srcset="img/photo-3-tablet@2x.jpg 2x, img/photo-3-tablet.jpg 1x">
-              <img class="photo__img" src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="фото">
-            </picture>
-            <div class="photo__wrap">
-              <h3 class="photo__name">Дорога на север</h3>
-              <p class="photo__author">Афтор фото: <span class="photo__author--name">Петр</span></p>
-              <p class="photo__like">96</p>
-            </div>           
-          </li>
-          <li class="photo__item">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/photo-4-desktop@2x.webp 2x, img/photo-4-desktop.webp 1x" type="image/webp">
-              <source media="(min-width: 768px)" srcset="img/photo-4-tablet@2x.webp 2x, img/photo-4-tablet.webp 1x" type="image/webp">
-              <source srcset="img/photo-4-mobile@2x.webp 2x, img/photo-4-mobile.webp 1x" type="image/webp">
-
-              <source media="(min-width: 1200px)" srcset="img/photo-4-desktop@2x.jpg 2x, img/photo-4-desktop.jpg 1x">
-              <source media="(min-width: 768px)" srcset="img/photo-4-tablet@2x.jpg 2x, img/photo-4-tablet.jpg 1x">
-              <img class="photo__img" src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="фото">
-            </picture>
-            <div class="photo__wrap">
-              <h3 class="photo__name">Мост Дьявола</h3>
-              <p class="photo__author">Афтор фото: <span class="photo__author--name">Антон</span></p>
-              <p class="photo__like">254</p>
-            </div>           
-          </li>
-        </ul>
-      </section> 
-
-      <section class="video">
-        <h2 class="video__title">Все еще сомневаетесь?</h2>
-        <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-        <div class="video__wrap">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/video-desktop@2x.webp 2x, img/video-desktop.webp 1x" type="image/webp">
-            <source media="(min-width: 768px)" srcset="img/video-tablet@2x.webp 2x, img/video-tablet.webp 1x" type="image/webp">
-            <source srcset="img/video-mobile@2x.webp 2x, img/video-mobile.webp 1x" type="image/webp">
-
-            <source media="(min-width: 1200px)" srcset="img/video-desktop@2x.jpg 2x, img/video-desktop.jpg 1x">
-            <source media="(min-width: 768px)" srcset="img/video-tablet@2x.jpg 2x, img/video-tablet.jpg 1x">
-            <img class="video__img" src="img/video-mobile.jpg" srcset="img/video-mobile@2x,jpg 2x" alt="картинка видео">
-          </picture>
-          
-          <div class="video__control">
-            <button class="video__button video__button--return" type="button" name="return">
-              <svg class="svg return"><use xlink:href="img/sprite.svg#icon-replay"></use></svg>Повторить</button>
-            <div class="video__button--range range">
-              <div class="range__line">
-                <div class="range__target"></div>
-              </div>
-            </div>
-            <button class="video__button video__button--subtitles" type="button" name="quality">
-              <svg class="svg subtitles"><use xlink:href="img/sprite.svg#icon-subtitles"></use></svg>Субтитры</button>
-            <button class="video__button video__button--fullscreen" type="button" name="fullscreen">
-              <svg class="svg fullscreen"><use xlink:href="img/sprite.svg#icon-fullscreen"></use></svg>Размер</button>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <ul class="footer__list">
-        <li class="footer__item">
-          <a class="footer__link visit" href="#">#VisitSedona</a>
-        </li>
-        <li class="footer__item footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__tw" href="#">
-                <svg class="social__img social__img--tw" width="18" height="14"><use xlink:href="img/sprite.svg#icon-tw"></use></svg>
-                Твиттер</a>
+      <header class="header">
+        <nav class="header__nav nav nav--close">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Главная</a>
             </li>
-            <li class="social__item">
-              <a class="social__link social__fb" href="#">
-                <svg class="social__img social__img--fb" width="9" height="18"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
-                Фейсбук</a>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Фото и видео</a>
             </li>
-            <li class="social__item">
-              <a class="social__link social__youtube" href="#">
-                <svg class="social__img social__img--youtube" width="20" height="14"><use xlink:href="img/sprite.svg#icon-youtube"></use></svg>
-                Ютуб</a>
+            <li class="nav__item">
+              <a href="form.html" class="nav__link">Форма отзыва</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Html academy</a>
             </li>
           </ul>
-        </li>
-        <li class="footer__item footer__html html">
-          <a class="html__link" href="#">Разработано</a>
-          <svg class="html__img"><use xlink:href="img/sprite.svg#icon-html"></use></svg>
-        </li>
-      </ul>
-    </footer>
-  </div>
-  <script src="js/menu.js"></script>
+        </nav>
+        <div class="header__control control">
+          <ul class="control__list">
+            <li class="control__item">
+              <button
+                class="control__button control__button--open"
+                type="button"
+                name="button"
+              >
+                Открыть меню
+              </button>
+            </li>
+            <li class="control__item">
+              <button
+                class="control__button control__button--close"
+                type="button"
+                name="button"
+              >
+                Закрыть меню
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="header__logo logo">
+          <a href="index.html" class="logo__link">
+            <picture>
+              <source
+                media="(min-width:1200px )"
+                srcset="img/logo-desktop.svg"
+              />
+              <img class="logo__img" src="img/logo.svg" alt="логотип Sedona" />
+            </picture>
+          </a>
+        </div>
+      </header>
+
+      <main class="main">
+        <h1 class="main__title">Sedona</h1>
+        <section class="photo">
+          <h2 class="photo__title">Фото и видео</h2>
+          <p class="photo__text">
+            Не можете решиться на путешествие из-за курса? <br />
+            Фотографии помогут вам забыть о политике и экономике.
+          </p>
+          <ul class="photo__list">
+            <li class="photo__item">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    img/photo-1-desktop@2x.webp 2x,
+                    img/photo-1-desktop.webp    1x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/photo-1-tablet@2x.webp 2x,
+                    img/photo-1-tablet.webp    1x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/photo-1-mobile@2x.webp 2x,
+                    img/photo-1-mobile.webp    1x
+                  "
+                  type="image/webp"
+                />
+
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    img/photo-1-desktop@2x.jpg 2x,
+                    img/photo-1-desktop.jpg    1x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/photo-1-tablet@2x.jpg 2x,
+                    img/photo-1-tablet.jpg    1x
+                  "
+                />
+                <img
+                  class="photo__img"
+                  src="img/photo-1-mobile.jpg"
+                  srcset="img/photo-1-mobile@2x.jpg 2x"
+                  alt="фото"
+                />
+              </picture>
+              <div class="photo__wrap">
+                <h3 class="photo__name">Неродные просторы</h3>
+                <p class="photo__author">
+                  Афтор фото: <span class="photo__author--name">Борис</span>
+                </p>
+                <p class="photo__like">1350</p>
+              </div>
+            </li>
+            <li class="photo__item">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    img/photo-2-desktop@2x.webp 2x,
+                    img/photo-2-desktop.webp    1x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/photo-2-tablet@2x.webp 2x,
+                    img/photo-2-tablet.webp    1x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/photo-2-mobile@2x.webp 2x,
+                    img/photo-2-mobile.webp    1x
+                  "
+                  type="image/webp"
+                />
+
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    img/photo-2-desktop@2x.jpg 2x,
+                    img/photo-2-desktop.jpg    1x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/photo-2-tablet@2x.jpg 2x,
+                    img/photo-2-tablet.jpg    1x
+                  "
+                />
+                <img
+                  class="photo__img"
+                  src="img/photo-2-mobile.jpg"
+                  srcset="img/photo-2-mobile@2x.jpg 2x"
+                  alt="фото"
+                />
+              </picture>
+              <div class="photo__wrap">
+                <h3 class="photo__name">Местная растительность</h3>
+                <p class="photo__author">
+                  Афтор фото: <span class="photo__author--name">Сергей</span>
+                </p>
+                <p class="photo__like">143</p>
+              </div>
+            </li>
+            <li class="photo__item">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    img/photo-3-desktop@2x.webp 2x,
+                    img/photo-3-desktop.webp    1x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/photo-3-tablet@2x.webp 2x,
+                    img/photo-3-tablet.webp    1x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/photo-3-mobile@2x.webp 2x,
+                    img/photo-3-mobile.webp    1x
+                  "
+                  type="image/webp"
+                />
+
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    img/photo-3-desktop@2x.jpg 2x,
+                    img/photo-3-desktop.jpg    1x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/photo-3-tablet@2x.jpg 2x,
+                    img/photo-3-tablet.jpg    1x
+                  "
+                />
+                <img
+                  class="photo__img"
+                  src="img/photo-3-mobile.jpg"
+                  srcset="img/photo-3-mobile@2x.jpg 2x"
+                  alt="фото"
+                />
+              </picture>
+              <div class="photo__wrap">
+                <h3 class="photo__name">Дорога на север</h3>
+                <p class="photo__author">
+                  Афтор фото: <span class="photo__author--name">Петр</span>
+                </p>
+                <p class="photo__like">96</p>
+              </div>
+            </li>
+            <li class="photo__item">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    img/photo-4-desktop@2x.webp 2x,
+                    img/photo-4-desktop.webp    1x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/photo-4-tablet@2x.webp 2x,
+                    img/photo-4-tablet.webp    1x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    img/photo-4-mobile@2x.webp 2x,
+                    img/photo-4-mobile.webp    1x
+                  "
+                  type="image/webp"
+                />
+
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    img/photo-4-desktop@2x.jpg 2x,
+                    img/photo-4-desktop.jpg    1x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/photo-4-tablet@2x.jpg 2x,
+                    img/photo-4-tablet.jpg    1x
+                  "
+                />
+                <img
+                  class="photo__img"
+                  src="img/photo-4-mobile.jpg"
+                  srcset="img/photo-4-mobile@2x.jpg 2x"
+                  alt="фото"
+                />
+              </picture>
+              <div class="photo__wrap">
+                <h3 class="photo__name">Мост Дьявола</h3>
+                <p class="photo__author">
+                  Афтор фото: <span class="photo__author--name">Антон</span>
+                </p>
+                <p class="photo__like">254</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="video">
+          <h2 class="video__title">Все еще сомневаетесь?</h2>
+          <p class="video__text">
+            Смотрите видеопрезентацию и скорее за билетами, пока они не
+            подорожали в очередной раз!
+          </p>
+          <div class="video__wrap">
+            <picture>
+              <source
+                media="(min-width: 1200px)"
+                srcset="img/video-desktop@2x.webp 2x, img/video-desktop.webp 1x"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="img/video-tablet@2x.webp 2x, img/video-tablet.webp 1x"
+                type="image/webp"
+              />
+              <source
+                srcset="img/video-mobile@2x.webp 2x, img/video-mobile.webp 1x"
+                type="image/webp"
+              />
+
+              <source
+                media="(min-width: 1200px)"
+                srcset="img/video-desktop@2x.jpg 2x, img/video-desktop.jpg 1x"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="img/video-tablet@2x.jpg 2x, img/video-tablet.jpg 1x"
+              />
+              <img
+                class="video__img"
+                src="img/video-mobile.jpg"
+                srcset="img/video-mobile@2x,jpg 2x"
+                alt="картинка видео"
+              />
+            </picture>
+
+            <div class="video__control">
+              <button
+                class="video__button video__button--return"
+                type="button"
+                name="return"
+              >
+                <svg class="svg return">
+                  <use xlink:href="img/sprite.svg#icon-replay"></use></svg
+                >Повторить
+              </button>
+              <div class="video__button--range range">
+                <div class="range__line">
+                  <div class="range__target"></div>
+                </div>
+              </div>
+              <button
+                class="video__button video__button--subtitles"
+                type="button"
+                name="quality"
+              >
+                <svg class="svg subtitles">
+                  <use xlink:href="img/sprite.svg#icon-subtitles"></use></svg
+                >Субтитры
+              </button>
+              <button
+                class="video__button video__button--fullscreen"
+                type="button"
+                name="fullscreen"
+              >
+                <svg class="svg fullscreen">
+                  <use xlink:href="img/sprite.svg#icon-fullscreen"></use></svg
+                >Размер
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link visit" href="#">#VisitSedona</a>
+          </li>
+          <li class="footer__item footer__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link social__tw" href="#">
+                  <svg
+                    class="social__img social__img--tw"
+                    width="18"
+                    height="14"
+                  >
+                    <use xlink:href="img/sprite.svg#icon-tw"></use>
+                  </svg>
+                  Твиттер</a
+                >
+              </li>
+              <li class="social__item">
+                <a class="social__link social__fb" href="#">
+                  <svg
+                    class="social__img social__img--fb"
+                    width="9"
+                    height="18"
+                  >
+                    <use xlink:href="img/sprite.svg#icon-fb"></use>
+                  </svg>
+                  Фейсбук</a
+                >
+              </li>
+              <li class="social__item">
+                <a class="social__link social__youtube" href="#">
+                  <svg
+                    class="social__img social__img--youtube"
+                    width="20"
+                    height="14"
+                  >
+                    <use xlink:href="img/sprite.svg#icon-youtube"></use>
+                  </svg>
+                  Ютуб</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="footer__item footer__html html">
+            <a class="html__link" href="#">Разработано</a>
+            <svg class="html__img">
+              <use xlink:href="img/sprite.svg#icon-html"></use>
+            </svg>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script src="js/menu.js"></script>
   </body>
 </html>
